@@ -11,10 +11,13 @@ public class GenericResourceBundle {
 		while (keys.hasMoreElements()) {
 			
 			String key =  keys.nextElement();
-			
 			if(key.equalsIgnoreCase(source)){
 				value = rb.getString(key);
 			}
+			else{
+				value=fail;
+			}
+			
 		}
 		return value;
 	}
